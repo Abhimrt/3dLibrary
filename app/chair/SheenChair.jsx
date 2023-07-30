@@ -5,11 +5,11 @@ Command: npx gltfjsx@6.2.10 .\SheenChair.glb
 "use client";
 import React, { useState, useEffect } from "react";
 import { useGLTF } from '@react-three/drei'
-import { useControls } from 'leva'
+import { useControls ,Leva} from 'leva'
 import { Color } from 'three'
 
 export function Model(props) {
-  const { nodes, materials } = useGLTF("/SheenChair.glb");
+  const { nodes, materials } = useGLTF("/models/SheenChair.glb");
   const [hovered, setHovered] = useState(false)
 
   useEffect(() => {
@@ -81,6 +81,7 @@ export function Model(props) {
         position={[-0.001, 0.236, 0.06]}
         rotation={[-0.087, 0, 0]}
       />
+       {/* <Leva collapsed /> */}
     </group>
   );
 }

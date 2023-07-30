@@ -15,7 +15,7 @@ export default function Home() {
   function Env() {
     return (
       <Environment
-        preset="apartment"
+        files={"./images/lebombo_1k.exr"}
         background
         ground={{
           height: 20,
@@ -35,11 +35,11 @@ export default function Home() {
       <section className="section">
         <Canvas shadows camera={{ position: [-10, 8, 10] }} >
             <Env />
-            <Environment preset="apartment" background />
             <Model />
             <ContactShadows position={[0.1, -0.8, 0.3]} color="#525150" />
             <OrbitControls autoRotate />
         </Canvas>
+            <Leva collapsed />
       </section>
     </>
   );
