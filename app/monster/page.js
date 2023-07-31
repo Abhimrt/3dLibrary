@@ -34,7 +34,9 @@ export default function Home() {
         <Canvas shadows camera={{ position: [-20, 15, 20] }}>
           <Env />
           <Center>
-            <Model />
+            <Suspense fallback={null}>
+              <Model />
+            </Suspense>
           </Center>
           <ContactShadows position={[0, -0.2, 0]} color="#000" />
           <OrbitControls autoRotate />

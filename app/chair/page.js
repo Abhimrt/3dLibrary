@@ -34,12 +34,14 @@ export default function Home() {
       <Loader />
       <section className="section">
         <Canvas shadows camera={{ position: [-10, 8, 10] }} >
-            <Env />
+          <Env />
+          <Suspense fallback={null}>
             <Model />
-            <ContactShadows position={[0.1, -0.8, 0.3]} color="#525150" />
-            <OrbitControls autoRotate />
+          </Suspense>
+          <ContactShadows position={[0.1, -0.8, 0.3]} color="#525150" />
+          <OrbitControls autoRotate />
         </Canvas>
-            <Leva collapsed />
+        <Leva collapsed />
       </section>
     </>
   );
