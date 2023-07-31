@@ -34,6 +34,11 @@ export default function MonsterAr() {
       });
   };
 
+  const stopCam = ()=>{
+    stream.getTracks().forEach(function (track) {
+      track.stop();
+    })
+  }
 
 
   return (
@@ -53,12 +58,9 @@ export default function MonsterAr() {
           <ContactShadows position={[0, -0.2, 0]} color="#000" />
           <OrbitControls />
         </Canvas>
-        {/* <div onClick={()=>stream.getTracks().forEach(function (track) {
-                  track.stop();
-                })}>  */}
-          
+        <div onClick={stopCam}> 
         <Button  />
-        {/* </div> */}
+        </div>
       </section>
 
 
