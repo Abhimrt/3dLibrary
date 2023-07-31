@@ -11,6 +11,7 @@ import { Model } from "./Monster";
 import { Leva, useControls } from "leva";
 import { Suspense } from "react";
 import Loader from "../Component/Loader";
+import Button from "../Component/Button";
 
 export default function Home() {
   function Env() {
@@ -42,6 +43,7 @@ export default function Home() {
           <OrbitControls autoRotate />
           {/* <Leva collapsed /> */}
         </Canvas>
+        <Button/>
       </section>
     </>
   );

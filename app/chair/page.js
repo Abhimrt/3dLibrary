@@ -4,12 +4,12 @@ import {
   OrbitControls,
   Environment,
   ContactShadows,
-  Html,
 } from "@react-three/drei";
 import { Model } from "./SheenChair";
-import { Leva, useControls } from "leva";
+import { Leva } from "leva";
 import { Suspense } from "react";
 import Loader from "../Component/Loader";
+import Button from "../Component/Button";
 
 export default function Home() {
   function Env() {
@@ -31,7 +31,7 @@ export default function Home() {
 
   return (
     <>
-      <Loader />
+      <Loader className="loader" />
       <section className="section">
         <Canvas shadows camera={{ position: [-10, 8, 10] }} >
           <Env />
@@ -43,6 +43,7 @@ export default function Home() {
         </Canvas>
         <Leva collapsed />
       </section>
+      <Button/>
     </>
   );
 }

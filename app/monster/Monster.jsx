@@ -6,7 +6,7 @@ Command: npx gltfjsx@6.2.10 .\monster.glb
 import React, { useEffect, useRef } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
 
-export function Model(props) {
+export  function Model(props) {
   const group = useRef()
   const { nodes, materials, animations } = useGLTF('/models/monster.glb')
   const { actions,names } = useAnimations(animations, group)
