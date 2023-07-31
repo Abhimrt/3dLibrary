@@ -13,7 +13,7 @@ import { Suspense } from "react";
 import Loader from "../../Component/Loader";
 import Button from "../../Component/Button";
 
-export default function Home() {
+export default function Monster() {
   function Env() {
     return (
       <Environment

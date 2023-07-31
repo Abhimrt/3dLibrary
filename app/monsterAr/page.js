@@ -2,7 +2,6 @@
 import { Canvas } from "@react-three/fiber";
 import {
   OrbitControls,
-  Environment,
   ContactShadows,
   Html,
   Center,
@@ -12,17 +11,20 @@ import { Suspense, useEffect, useRef } from "react";
 import Fallback from "../../Component/Fallback";
 import Button from "../../Component/Button";
 
-export default function Home() {
+export default function MonsterAr() {
   const background = useRef()
 
   useEffect(() => {
     getVideo();
   }, [background]);
 
+  let stream
+
   const getVideo = () => {
     navigator.mediaDevices
       .getUserMedia({ video: { width: 300 } })
-      .then(stream => {
+      .then(gstream => {
+        stream = gstream
         let video = background.current;
         video.srcObject = stream;
         video.play();
@@ -43,12 +45,20 @@ export default function Home() {
           <Center>
             <Suspense fallback={<Html><Fallback /></Html>}>
               <Model />
+              <Html>
+                <button className="z-20 "  ></button>
+              </Html>
             </Suspense>
           </Center>
           <ContactShadows position={[0, -0.2, 0]} color="#000" />
           <OrbitControls />
         </Canvas>
-        <Button />
+        {/* <div onClick={()=>stream.getTracks().forEach(function (track) {
+                  track.stop();
+                })}>  */}
+          
+        <Button  />
+        {/* </div> */}
       </section>
 
 
