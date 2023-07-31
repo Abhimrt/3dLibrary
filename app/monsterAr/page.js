@@ -9,8 +9,8 @@ import {
 } from "@react-three/drei";
 import { Model } from "../monster/Monster";
 import { Suspense, useEffect, useRef } from "react";
-import Fallback from "../Component/Fallback";
-import Button from "../Component/Button";
+import Fallback from "../../Component/Fallback";
+import Button from "../../Component/Button";
 
 export default function Home() {
   const background = useRef()
@@ -31,7 +31,7 @@ export default function Home() {
         console.error("error:", err);
       });
   };
-  
+
 
 
   return (
@@ -48,7 +48,7 @@ export default function Home() {
           <ContactShadows position={[0, -0.2, 0]} color="#000" />
           <OrbitControls />
         </Canvas>
-        <Button/>
+        <Button />
       </section>
 
 

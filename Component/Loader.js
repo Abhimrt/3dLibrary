@@ -1,11 +1,9 @@
 import Image from "next/image";
 import React from "react";
-import loader from "../images/loader.gif"
 
 const Loader = () => {
   return (
     <div className="loader">
-      {/* <Image src={loader}  alt="Loading Please wait" width={200} height={200}/> */}
       
       <div role="status" className="">
     <svg aria-hidden="true" className="inline w-25 h-25 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-violet-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
